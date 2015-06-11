@@ -1,0 +1,23 @@
+{
+  "name": "qr-decode-server",
+  "version": "1.0.0",
+  "description": "Accepts HTTP post of an image and decodes QR codes found in that image.",
+  "main": "app.coffee",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "qrcode",
+    "decode",
+    "node",
+    "server"
+  ],
+  "author": "Adam Loving",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^0.2.9",
+    "canvas": "^1.2.3",
+    "express": "^4.12.4",
+    "jsqrcode": "0.0.6"
+  }
+}
