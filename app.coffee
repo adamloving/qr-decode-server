@@ -1,13 +1,14 @@
-express = require('express')
-http = require('http')
+express    = require 'express'
+http       = require 'http'
+bodyParser = require 'body-parser'
 
-DecoderController = require('./decode_controller')
+EncodeController = require './encode_controller'
+DecodeController = require './decode_controller'
 
 app = express()
 
 app.set('port', process.env.PORT || 3012)
-app.set('views', __dirname + '/src/app/views')
-app.set('view engine', 'jade')
+app.use(bodyParser.text());
 
 app.all '*', (req, res, next) ->
   res.header('Access-Control-Allow-Origin', '*')
@@ -16,7 +17,8 @@ app.all '*', (req, res, next) ->
   next()
 
 app.get '/', (req, res) -> res.send status: 'success'
-app.post '/decode', DecoderController.post
+app.post '/encode', EncodeController.post
+app.post '/decode', DecodeController.post
 process.env.PORT = process.env.PORT || 3011
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 

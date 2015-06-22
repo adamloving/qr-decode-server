@@ -18,11 +18,13 @@
   "author": "Adam Loving",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.13.1",
     "busboy": "^0.2.9",
     "canvas": "^1.2.3",
     "coffee-script": "^1.9.3",
     "express": "^4.12.4",
     "jsqrcode": "0.0.6",
+    "qrcode": "^0.2.12",
     "stream-to-buffer": "^0.1.0"
   }
 }
