@@ -8,7 +8,6 @@
     $ brew install cairo
     $ export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:/opt/X11/lib/pkgconfig
 
-
 ### Heroku
 
 heroku buildpacks:set https://github.com/ddollar/heroku-buildpack-multi.git

@@ -1,7 +1,7 @@
 express = require('express')
 http = require('http')
 
-DecoderController = require('./decoder_controller')
+DecoderController = require('./decode_controller')
 
 app = express()
 

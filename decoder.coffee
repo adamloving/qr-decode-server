@@ -4,8 +4,9 @@ qrcode = require('jsqrcode')(Canvas)
 
 module.exports = class Decoder
 
-  # TODO: Support buffer base64 encode?
-  @decode: (fileName, callback) ->
+  # imageSrc can be either URL, local path name, or 
+  # "data:image/png;base64,..." string
+  @decode: (imageSrc, callback) ->
     image = new Image()
 
     image.onerror = ->
@@ -16,10 +17,10 @@ module.exports = class Decoder
       console.log 'onload'
       try
         result = qrcode.decode(image);
-        console.log 'found qr code: ' + result;
+        console.log 'found qr code: ' + result
         callback(null, result)
       catch e
-        console.log 'unable to read qr code';
+        console.log 'unable to read qr code', e
         callback(e)
 
-    image.src = fileName
+    image.src = imageSrc
