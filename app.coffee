@@ -15,6 +15,7 @@ app.all '*', (req, res, next) ->
   res.header('Access-Control-Allow-Headers', 'Content-Type')
   next()
 
+app.get '/', (req, res) -> res.send status: 'success'
 app.post '/decode', DecoderController.post
 process.env.PORT = process.env.PORT || 3011
 process.env.NODE_ENV = process.env.NODE_ENV || 'development'
