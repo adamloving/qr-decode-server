@@ -11,4 +11,9 @@
 
 ### Heroku
 
+heroku config:add BUILDPACK_URL=https://github.com/mojodna/heroku-buildpack-multi.git#build-env
+
+heroku buildpacks:set https://github.com/ddollar/heroku-buildpack-multi.git
+
+
 https://github.com/Automattic/node-canvas/wiki/Installation-on-Heroku

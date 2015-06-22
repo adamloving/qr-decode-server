@@ -1,7 +1,9 @@
 {
   "name": "qr-decode-server",
   "version": "1.0.0",
-  "engine": "v0.10.38",
+  "engines": {
+    "node": "0.10.38"
+  },
   "description": "Accepts HTTP post of an image and decodes QR codes found in that image.",
   "main": "app.coffee",
   "scripts": {
