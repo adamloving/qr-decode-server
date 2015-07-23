@@ -20,7 +20,7 @@
   "dependencies": {
     "body-parser": "^1.13.2",
     "busboy": "^0.2.9",
-    "canvas": "^1.1.6",
+    "canvas": "~1.1.6",
     "coffee-script": "^1.9.3",
     "express": "^4.13.1",
     "jsqrcode": "0.0.6",
